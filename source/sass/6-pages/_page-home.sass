@@ -1,39 +1,66 @@
-#header
-    background: url("../img/header.jpg")
-    background-size: cover
-    height: 100vh
-    text-align: center
-    color: white
-
-ul.main-nav
-    padding: 0
-.main-nav
+.navbar
+  background: white
+  height: 70px
+  width: 100%
+  ul.main-nav
+      padding: 0
+  .main-nav
     display: flex
-    margin-top: 20px
     margin-left: 0
     li
-        list-style: none
+      list-style: none
     li:first-child
-        margin-right: auto
+      margin-right: auto
 
     a
-        color: white
-        border-radius: 4px
-        padding: 15px 40px
-        text-decoration: none
-        display: block
-        font-weight: 900
-        text-transform: uppercase
+      color: $aitt_dark
+      border-radius: 4px
+      padding: 15px 40px
+      text-decoration: none
+      display: block
+      font-weight: 400
+      text-transform: uppercase
+      font-size: 16px
+      letter-spacing: 2px
+    a:hover
+      font-weight: 900
+      position: relative
+    a:hover::after
+      content: " "
+      position: absolute
+      border-bottom: 4px solid $aitt_brand
+      width: 50%
+      bottom: 5px
+      left: 0
+      right: 0
+      margin: 0 auto
+
     a.logo
-        margin-left: 0
-        padding: 0
+      margin-left: 0
+      padding: 0
     a.download
-        color: #000
-        background: white
-        box-shadow: 0 10px 10px rgba(0,0,0,0.2)
-article
+      color: #000
+      background: white
+      box-shadow: 0 1px 10px rgba(0,0,0,0.15)
+      margin-left: 40px
+    a.download:hover::after
+      content: ""
+      border-bottom: 0px
+
+#header
+  background-color: $aitt_brand
+  // background-size: cover
+  height: 100vh
+  text-align: center
+  article
     width: 80%
     margin: 0 auto
+    color: white
     h1
-        color: white
-        margin-bottom: 10px
+      margin-bottom: 20px
+      margin-top: 160px
+      font-size: 96px
+      color: white
+
+    p
+      font-size: 20px

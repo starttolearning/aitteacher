@@ -343,43 +343,65 @@ hr {
   width: 100%;
   left: 0; }
 
-#header {
-  background: url("../img/header.jpg");
-  background-size: cover;
-  height: 100vh;
-  text-align: center;
-  color: white; }
-
-ul.main-nav {
-  padding: 0; }
-
-.main-nav {
-  display: flex;
-  margin-top: 20px;
-  margin-left: 0; }
-  .main-nav li {
-    list-style: none; }
-  .main-nav li:first-child {
-    margin-right: auto; }
-  .main-nav a {
-    color: white;
-    border-radius: 4px;
-    padding: 15px 40px;
-    text-decoration: none;
-    display: block;
-    font-weight: 900;
-    text-transform: uppercase; }
-  .main-nav a.logo {
-    margin-left: 0;
+.navbar {
+  background: white;
+  height: 70px;
+  width: 100%; }
+  .navbar ul.main-nav {
     padding: 0; }
-  .main-nav a.download {
-    color: #000;
-    background: white;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); }
+  .navbar .main-nav {
+    display: flex;
+    margin-left: 0; }
+    .navbar .main-nav li {
+      list-style: none; }
+    .navbar .main-nav li:first-child {
+      margin-right: auto; }
+    .navbar .main-nav a {
+      color: #132F75;
+      border-radius: 4px;
+      padding: 15px 40px;
+      text-decoration: none;
+      display: block;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 2px; }
+    .navbar .main-nav a:hover {
+      font-weight: 900;
+      position: relative; }
+    .navbar .main-nav a:hover::after {
+      content: " ";
+      position: absolute;
+      border-bottom: 4px solid #FC6A6A;
+      width: 50%;
+      bottom: 5px;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+    .navbar .main-nav a.logo {
+      margin-left: 0;
+      padding: 0; }
+    .navbar .main-nav a.download {
+      color: #000;
+      background: white;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+      margin-left: 40px; }
+    .navbar .main-nav a.download:hover::after {
+      content: "";
+      border-bottom: 0px; }
 
-article {
-  width: 80%;
-  margin: 0 auto; }
-  article h1 {
-    color: white;
-    margin-bottom: 10px; }
+#header {
+  background-color: #FC6A6A;
+  height: 100vh;
+  text-align: center; }
+  #header article {
+    width: 80%;
+    margin: 0 auto;
+    color: white; }
+    #header article h1 {
+      margin-bottom: 20px;
+      margin-top: 160px;
+      font-size: 96px;
+      color: white; }
+    #header article p {
+      font-size: 20px; }
